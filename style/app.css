@@ -10,8 +10,16 @@
   font-family: "Boogaloo";
   src: local("Boogaloo"), url("../font/Boogaloo-Regular.ttf") format("ttf");
 }
+@font-face {
+  font-family: "ABeeZee";
+  src: local("ABeeZee"), url("../font/ABeeZee-Regular.ttf") format("ttf");
+}
 body {
   font-family: "Boogaloo";
+  background-color: #d9d9d9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   display: flex;
@@ -20,20 +28,52 @@ body {
 }
 .Logo {
   max-width: 8vw;
-  color: #092327;
 }
 .title {
   font-size: 3.5vw;
   color: #161616;
 }
 .nightMood {
-  width: 10vw;
+  width: 8vw;
   height: 3vw;
   border-radius: 60px;
   background-color: #092327;
   margin-left: 3%;
 }
+.line {
+  width: 80%;
+  height: 0.3vmax;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10pt;
+  background-color: #284b63;
+}
 .box {
+  width: 95vw;
+  height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box1 {
+  width: 29%;
+  height: 100%;
+  background-color: #90c2e7;
+  border-radius: 18px;
+}
+.box2 {
+  width: 69%;
+  height: 100%;
+  border: 0.3vmax solid #3C6E71;
+  border-radius: 18px;
 }
 .footer {
+  font-family: "ABeeZee";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
 }
