@@ -40,6 +40,13 @@ body {
   background-color: #092327;
   margin-left: 3%;
 }
+.moon {
+  width: 50%;
+  position: relative;
+  margin-top: -13%;
+  margin-left: 51%;
+  filter: drop-shadow(0px 0px 3px #c6c6c6);
+}
 .line {
   width: 80%;
   height: 0.3vmax;
@@ -63,12 +70,29 @@ body {
   height: 100%;
   background-color: #90c2e7;
   border-radius: 18px;
+  display: flex;
+  align-items: center;
+}
+.text {
+  width: 50%;
+  font-size: 4vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #0B5351;
 }
 .box2 {
   width: 69%;
   height: 100%;
-  border: 0.3vmax solid #3C6E71;
+  border: 0.3vmax solid #3c6e71;
   border-radius: 18px;
+  display: flex;
+  align-items: center;
+}
+.pulsIcon {
+  width: 12vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer {
   font-family: "ABeeZee";
@@ -76,4 +100,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+  margin-bottom: 1.5px;
 }
