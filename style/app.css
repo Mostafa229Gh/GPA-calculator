@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+@font-face {
+  font-family: "Boogaloo";
+  src: local("Boogaloo"), url("../font/Boogaloo-Regular.ttf") format("ttf");
+}
+body {
+  font-family: "Boogaloo";
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Logo {
+  max-width: 8vw;
+  color: #092327;
+}
+.title {
+  font-size: 3.5vw;
+  color: #161616;
+}
+.nightMood {
+  width: 10vw;
+  height: 3vw;
+  border-radius: 60px;
+  background-color: #092327;
+  margin-left: 3%;
+}
+.box {
+}
+.footer {
+}
