@@ -14,7 +14,7 @@
 <body>
     <div class="header">
         <div class="nightMood">
-            <img src="./image/icons-moon.png" alt="" class="moon">
+            <img src="./image/icons-moon.png" alt="" class="moon" id="moon">
         </div>
         <div class="title">GPA calculator</div>
         <img src="./image/mgh.svg" alt="MGH" class="Logo">
@@ -27,13 +27,25 @@
             </div>
         </div>
         <div class="box2">
-            <img src="./image/icons-plus.svg" alt="" class="pulsIcon">
+            <button class="plusButton">
+                <img src="./image/icons-plus.svg" alt="" class="plusIcon">
+            </button>
         </div>
     </div>
     <div class="footer">
         <p>created by Mostafa.GH</p>
         <p>mostafa229gh@gmail.com</p>
     </div>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const moon = document.getElementById("moon");
+
+            moon.addEventListener("click", function () {
+                moon.style.transform = "translateX(-100%) rotate(90deg)";
+            });
+        });
+    </script> -->
 </body>
 
 </html>

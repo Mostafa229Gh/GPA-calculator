@@ -46,6 +46,7 @@ body {
   margin-top: -13%;
   margin-left: 51%;
   filter: drop-shadow(0px 0px 3px #c6c6c6);
+  transition: all 80ms linear 90ms;
 }
 .line {
   width: 80%;
@@ -79,7 +80,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  color: #0B5351;
+  color: #0b5351;
 }
 .box2 {
   width: 69%;
@@ -89,10 +90,20 @@ body {
   display: flex;
   align-items: center;
 }
-.pulsIcon {
-  width: 12vw;
+.plusButton {
+  background-color: #ffffff00;
+  border-radius: 100px;
+  display: inline;
   margin-left: auto;
   margin-right: auto;
+}
+.plusIcon {
+  width: 12vw;
+  transition: all 80ms linear 90ms;
+}
+.plusIcon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(6px 5px 7px #162a2b);
 }
 .footer {
   font-family: "ABeeZee";
