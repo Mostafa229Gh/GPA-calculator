@@ -5,7 +5,18 @@
   box-sizing: border-box;
   border: none;
   outline: none;
+  cursor: default;
 }
+:root {
+  --bgColor: #d9d9d9;
+  --title-Color: #161616;
+  --night-Mode-Color: #092327;
+  --line-Color: #284b63;
+  --box-1-Color: #90c2e7;
+  --text-Color: #0b5351;
+  --box-2-border-Color: #3c6e71;
+}
+
 @font-face {
   font-family: "Boogaloo";
   src: local("Boogaloo"), url("../font/Boogaloo-Regular.ttf") format("ttf");
@@ -16,7 +27,7 @@
 }
 body {
   font-family: "Boogaloo";
-  background-color: #d9d9d9;
+  background-color: var(--bgColor);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,14 +42,26 @@ body {
 }
 .title {
   font-size: 3.5vw;
-  color: #161616;
+  color: var(--title-Color);
 }
 .nightMood {
   width: 8vw;
   height: 3vw;
   border-radius: 60px;
-  background-color: #092327;
+  background-color: var(--night-Mode-Color);
   margin-left: 3%;
+}
+@keyframes rotateMoon {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.moon {
+  animation: rotateMoon 5s linear infinite;
 }
 .moon {
   width: 50%;
@@ -54,7 +77,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   border-radius: 10pt;
-  background-color: #284b63;
+  background-color: var(--line-Color);
 }
 .box {
   width: 95vw;
@@ -69,8 +92,8 @@ body {
 .box1 {
   width: 29%;
   height: 100%;
-  background-color: #90c2e7;
-  border-radius: 18px;
+  background-color: var(--box-1-Color);
+  border-radius: 7% 93% 9% 91% / 89% 6% 94% 11% ;
   display: flex;
   align-items: center;
 }
@@ -80,12 +103,12 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  color: #0b5351;
+  color: var(--text-Color);
 }
 .box2 {
   width: 69%;
   height: 100%;
-  border: 0.3vmax solid #3c6e71;
+  border: 0.3vmax solid var(--box-2-border-Color);
   border-radius: 18px;
   display: flex;
   align-items: center;
