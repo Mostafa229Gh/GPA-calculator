@@ -53,10 +53,10 @@ body {
 }
 @keyframes rotateMoon {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -93,7 +93,7 @@ body {
   width: 29%;
   height: 100%;
   background-color: var(--box-1-Color);
-  border-radius: 7% 93% 9% 91% / 89% 6% 94% 11% ;
+  border-radius: 7% 93% 9% 91% / 89% 6% 94% 11%;
   display: flex;
   align-items: center;
 }
@@ -110,15 +110,16 @@ body {
   height: 100%;
   border: 0.3vmax solid var(--box-2-border-Color);
   border-radius: 18px;
-  display: flex;
-  align-items: center;
+  padding: 30px 25px 25px 25px;
 }
 .plusButton {
   background-color: #ffffff00;
   border-radius: 100px;
-  display: inline;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  top: calc(46vh - 50%);
 }
 .plusIcon {
   width: 12vw;
@@ -128,6 +129,35 @@ body {
   transform: scale(1.1);
   filter: drop-shadow(6px 5px 7px #162a2b);
 }
+.inputs-lists {
+  display: none;
+  width: 100%;
+}
+.form-section {
+}
+.inputs {
+  padding: 5px 5px 5px 8px;
+  font-family: inherit;
+  width: 25%;
+  height: 6vh;
+  font-size: 23px;
+  border-radius: 8px;
+  color: var(--title-Color);
+}
+.inputs::placeholder{
+  color: var(--bgColor);
+}
+.inputs::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.course-name {
+}
+.unit {
+}
+.score {
+}
+
 .footer {
   font-family: "ABeeZee";
   display: flex;
