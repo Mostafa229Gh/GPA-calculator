@@ -134,6 +134,9 @@ body {
   width: 100%;
 }
 .form-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .inputs {
   padding: 5px 5px 5px 8px;
@@ -156,6 +159,12 @@ body {
 .unit {
 }
 .score {
+}
+.form-button{
+  background-color: #ffffff00;
+  width: 50px;
+  height: 7vh;
+  padding: 4px;
 }
 
 .footer {
