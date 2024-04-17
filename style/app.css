@@ -18,22 +18,24 @@
   --Logo-Color: #092327;
   --PlaceHolder-Color: #d9d9d9;
   --inputs-bg-Color: #fff;
-  --iconRT-Color:#284B63;
+  --inputs-Color: #161616;
+  --iconRT-Color: #284b63;
 }
-
+/* ---------dark mood cooler set-------- */
 /* :root {
   --bgColor: #0d181f;
-  --title-Color: #d9d9d9;
+  --title-Color: #90c2e7;
   --night-Mode-Color: #d2c5b4;
   --line-Color: #15918c;
-  --box-1-Color: #07365d;
+  --box-1-Color: #0b5351;
   --text-Color: #90c2e7;
   --box-2-border-Color: #90c2e7;
   --footer-color: #cfcfcf;
   --Logo-Color: #90c2e7;
   --PlaceHolder-Color: #c6c6c6b4;
   --inputs-bg-Color: #ffffff50;
-  --iconRT-Color:#90c2e7;
+  --inputs-Color: #161616;
+  --iconRT-Color:#c6c6c6b4;
 } */
 
 @font-face {
@@ -71,23 +73,28 @@ body {
   background-color: var(--night-Mode-Color);
   margin-left: 3%;
 }
-/* .dark-mode {
-  --bgColor: #284b63;
-  --title-Color: #d9d9d9;
-  --night-Mode-Color: #c78e43;
-  --line-Color: #90c2e7;
-  --box-1-Color: #0b5351;
+.dark-mode {
+  transition: background-color 350ms ease;
+  --bgColor: #263238;
+  --title-Color: #b2ccd6;
+  --night-Mode-Color: #dfb86f;
+  --line-Color: #405470;
+  --box-1-Color: #19252c;
   --text-Color: #90c2e7;
-  --box-2-border-Color: #15918c;
-} */
-
+  --box-2-border-Color: #2d4361;
+  --footer-color: #cfcfcf;
+  --Logo-Color: #b2ccd6;
+  --PlaceHolder-Color: #c6c6c6b4;
+  --inputs-bg-Color: #3a4b61;
+  --inputs-Color: #f1d700;
+  --iconRT-Color: #c9a2e2;
+}
 .moon {
   width: 50%;
   position: relative;
   margin-top: -13%;
   margin-left: 51%;
   filter: drop-shadow(0px 0px 3px #c6c6c6);
-
 }
 .line {
   width: 80%;
@@ -114,11 +121,11 @@ body {
   border-radius: 7% 93% 9% 91% / 89% 6% 94% 11%;
   display: flex;
   align-items: center;
-  transition: all 80ms linear 90ms;
+  transition: border-radius 80ms linear 90ms;
 }
 .box1:hover {
   border-radius: 6px;
-  box-shadow: 2px 2px 7px #162a2b;
+  box-shadow: 1px 1px 18px -5px #1e4344;
 }
 .text {
   width: 50%;
@@ -168,7 +175,7 @@ body {
   height: 6vh;
   font-size: 23px;
   border-radius: 8px;
-  color: var(--title-Color);
+  color: var(--inputs-Color);
   background-color: var(--inputs-bg-Color);
 }
 .inputs::placeholder {
@@ -178,19 +185,13 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
-.course-name {
-}
-.unit {
-}
-.score {
-}
 .form-button {
   background-color: #ffffff00;
   width: 50px;
   height: 7vh;
   padding: 4px;
 }
-.iconRT{
+.iconRT {
   fill: var(--iconRT-Color);
 }
 .footer {
