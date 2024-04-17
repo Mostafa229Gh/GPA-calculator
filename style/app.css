@@ -15,7 +15,26 @@
   --box-1-Color: #90c2e7;
   --text-Color: #0b5351;
   --box-2-border-Color: #3c6e71;
+  --Logo-Color: #092327;
+  --PlaceHolder-Color: #d9d9d9;
+  --inputs-bg-Color: #fff;
+  --iconRT-Color:#284B63;
 }
+
+/* :root {
+  --bgColor: #0d181f;
+  --title-Color: #d9d9d9;
+  --night-Mode-Color: #d2c5b4;
+  --line-Color: #15918c;
+  --box-1-Color: #07365d;
+  --text-Color: #90c2e7;
+  --box-2-border-Color: #90c2e7;
+  --footer-color: #cfcfcf;
+  --Logo-Color: #90c2e7;
+  --PlaceHolder-Color: #c6c6c6b4;
+  --inputs-bg-Color: #ffffff50;
+  --iconRT-Color:#90c2e7;
+} */
 
 @font-face {
   font-family: "Boogaloo";
@@ -37,8 +56,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.Logo {
+#Logo {
   max-width: 8vw;
+  fill: var(--Logo-Color);
 }
 .title {
   font-size: 3.5vw;
@@ -51,25 +71,23 @@ body {
   background-color: var(--night-Mode-Color);
   margin-left: 3%;
 }
-@keyframes rotateMoon {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .dark-mode {
+  --bgColor: #284b63;
+  --title-Color: #d9d9d9;
+  --night-Mode-Color: #c78e43;
+  --line-Color: #90c2e7;
+  --box-1-Color: #0b5351;
+  --text-Color: #90c2e7;
+  --box-2-border-Color: #15918c;
+} */
 
-.moon {
-  animation: rotateMoon 5s linear infinite;
-}
 .moon {
   width: 50%;
   position: relative;
   margin-top: -13%;
   margin-left: 51%;
   filter: drop-shadow(0px 0px 3px #c6c6c6);
-  transition: all 80ms linear 90ms;
+
 }
 .line {
   width: 80%;
@@ -96,6 +114,11 @@ body {
   border-radius: 7% 93% 9% 91% / 89% 6% 94% 11%;
   display: flex;
   align-items: center;
+  transition: all 80ms linear 90ms;
+}
+.box1:hover {
+  border-radius: 6px;
+  box-shadow: 2px 2px 7px #162a2b;
 }
 .text {
   width: 50%;
@@ -130,7 +153,7 @@ body {
   filter: drop-shadow(6px 5px 7px #162a2b);
 }
 .inputs-lists {
-  display: none;
+  /* display: none; */
   width: 100%;
 }
 .form-section {
@@ -146,9 +169,10 @@ body {
   font-size: 23px;
   border-radius: 8px;
   color: var(--title-Color);
+  background-color: var(--inputs-bg-Color);
 }
-.inputs::placeholder{
-  color: var(--bgColor);
+.inputs::placeholder {
+  color: var(--PlaceHolder-Color);
 }
 .inputs::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -160,15 +184,18 @@ body {
 }
 .score {
 }
-.form-button{
+.form-button {
   background-color: #ffffff00;
   width: 50px;
   height: 7vh;
   padding: 4px;
 }
-
+.iconRT{
+  fill: var(--iconRT-Color);
+}
 .footer {
   font-family: "ABeeZee";
+  color: var(--footer-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
