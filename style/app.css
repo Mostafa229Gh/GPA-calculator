@@ -6,6 +6,7 @@
   border: none;
   outline: none;
   cursor: default;
+  user-select: none;
 }
 :root {
   --bgColor: #d9d9d9;
@@ -21,23 +22,6 @@
   --inputs-Color: #161616;
   --iconRT-Color: #284b63;
 }
-/* ---------dark mood cooler set-------- */
-/* :root {
-  --bgColor: #0d181f;
-  --title-Color: #90c2e7;
-  --night-Mode-Color: #d2c5b4;
-  --line-Color: #15918c;
-  --box-1-Color: #0b5351;
-  --text-Color: #90c2e7;
-  --box-2-border-Color: #90c2e7;
-  --footer-color: #cfcfcf;
-  --Logo-Color: #90c2e7;
-  --PlaceHolder-Color: #c6c6c6b4;
-  --inputs-bg-Color: #ffffff50;
-  --inputs-Color: #161616;
-  --iconRT-Color:#c6c6c6b4;
-} */
-
 @font-face {
   font-family: "Boogaloo";
   src: local("Boogaloo"), url("../font/Boogaloo-Regular.ttf") format("ttf");
@@ -89,12 +73,17 @@ body {
   --inputs-Color: #f1d700;
   --iconRT-Color: #c9a2e2;
 }
-.moon {
-  width: 50%;
-  position: relative;
-  margin-top: -13%;
-  margin-left: 51%;
-  filter: drop-shadow(0px 0px 3px #c6c6c6);
+.circle {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 100%;
+  position: absolute;
+  left: 7.3vw;
+  top: 1.5vw;
+  background-image: url(../image/icons-moon.png);
+  background-size: cover;
+  filter: drop-shadow(0px 0px 3px #161616c6);
+  transition: all 300ms ease;
 }
 .line {
   width: 80%;
