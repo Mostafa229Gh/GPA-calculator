@@ -16,6 +16,7 @@
   --box-1-Color: #90c2e7;
   --text-Color: #0b5351;
   --box-2-border-Color: #3c6e71;
+  --footer-color: #000000;
   --Logo-Color: #092327;
   --PlaceHolder-Color: #d9d9d9;
   --inputs-bg-Color: #fff;
@@ -130,6 +131,11 @@ body {
   border: 0.3vmax solid var(--box-2-border-Color);
   border-radius: 18px;
   padding: 30px 25px 25px 25px;
+
+  overflow-y: scroll;
+}
+.box2::-webkit-scrollbar {
+  display: none;
 }
 .plusButton {
   background-color: #ffffff00;
@@ -139,6 +145,7 @@ body {
   margin-right: auto;
   position: relative;
   top: calc(46vh - 50%);
+  transition: all 200ms linear;
 }
 .plusIcon {
   width: 12vw;
@@ -149,8 +156,18 @@ body {
   filter: drop-shadow(6px 5px 7px #162a2b);
 }
 .inputs-lists {
-  /* display: none; */
+  display: none;
   width: 100%;
+  transition: all 300ms linear;
+  animation: fadeIn 200ms;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .form-section {
   display: flex;
@@ -178,13 +195,14 @@ body {
   background-color: #ffffff00;
   width: 50px;
   height: 7vh;
-  padding: 4px;
+  padding: 8px;
 }
 .iconRT {
   fill: var(--iconRT-Color);
 }
 .footer {
   font-family: "ABeeZee";
+  font-size: 0.8rem;
   color: var(--footer-color);
   display: flex;
   justify-content: space-between;
@@ -193,4 +211,11 @@ body {
   margin-left: 1.5px;
   margin-right: 1.5px;
   margin-bottom: 1.5px;
+}
+#email {
+  color: var(--footer-color);
+  text-decoration: none;
+}
+#email:hover {
+  color: var(--text-Color);
 }
