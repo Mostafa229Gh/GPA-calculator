@@ -1,90 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPA calculator</title>
-    <link rel="icon" href="./image/icon-calculator.png" type="image/png">
-    <link rel="stylesheet" href="./style/app.css">
-    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
-</head>
+    <link rel="icon" href="./image/icon-calculator.png" type="image/png" />
+    <link rel="stylesheet" href="./style/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <div class="nightMood">
-            <span class="circle" id="dark-mode-toggle"></span>
-        </div>
-        <div class="title">GPA calculator</div>
-        <svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
-            <g>
-                <path d="M709,372.1v429.7c0,38.2-31,69.2-69.2,69.2V577.9h-75.6v25.2c0,19.1-15.5,34.6-34.6,34.6c-19.1,0-34.6-15.5-34.6-34.6v-151
-		c11.1,1.6,22.5,2.4,34,2.4c11.9,0,23.7-0.9,35.2-2.6v65.9h75.6v-90.7C666.2,413.2,689.7,394.5,709,372.1z" />
-                <path d="M557.6,718v17.2c0,14.2-11.5,25.7-25.7,25.7h-4v40.7c0,38.2-31,69.2-69.2,69.2H418c-38.2,0-69.2-31-69.2-69.2V372.2
-		c19.4,22.3,42.8,41,69.2,54.9v374.5h40.7v-82.2c0-15.4,12.5-27.8,27.8-27.8h44.8C545.9,691.6,557.7,703.4,557.6,718z" />
-                <path
-                    d="M708.9,293.9v25.8c-16.8,29.3-40.7,54.1-69.2,72.1v-90.2h-75.6v119.3c-11.4,2-23.2,3-35.2,3c-11.6,0-22.9-1-34-2.8V301.6
-		H418v90.2c-28.5-18-52.3-42.8-69.2-72.1v-25.8c0-38.2,31-69.2,69.2-69.2h221.8c19.2,0,36.5,7.8,49,20.3S709,274.8,708.9,293.9z" />
-            </g>
-        </svg>
+      <div class="nightMood">
+        <span class="circle" id="dark-mode-toggle"></span>
+      </div>
+      <div class="title">GPA calculator</div>
+      <svg
+        version="1.1"
+        id="Logo"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1080 1080"
+        style="enable-background: new 0 0 1080 1080"
+        xml:space="preserve"
+      >
+        <g>
+          <path
+            d="M709,372.1v429.7c0,38.2-31,69.2-69.2,69.2V577.9h-75.6v25.2c0,19.1-15.5,34.6-34.6,34.6c-19.1,0-34.6-15.5-34.6-34.6v-151
+		c11.1,1.6,22.5,2.4,34,2.4c11.9,0,23.7-0.9,35.2-2.6v65.9h75.6v-90.7C666.2,413.2,689.7,394.5,709,372.1z"
+          />
+          <path
+            d="M557.6,718v17.2c0,14.2-11.5,25.7-25.7,25.7h-4v40.7c0,38.2-31,69.2-69.2,69.2H418c-38.2,0-69.2-31-69.2-69.2V372.2
+		c19.4,22.3,42.8,41,69.2,54.9v374.5h40.7v-82.2c0-15.4,12.5-27.8,27.8-27.8h44.8C545.9,691.6,557.7,703.4,557.6,718z"
+          />
+          <path
+            d="M708.9,293.9v25.8c-16.8,29.3-40.7,54.1-69.2,72.1v-90.2h-75.6v119.3c-11.4,2-23.2,3-35.2,3c-11.6,0-22.9-1-34-2.8V301.6
+		H418v90.2c-28.5-18-52.3-42.8-69.2-72.1v-25.8c0-38.2,31-69.2,69.2-69.2h221.8c19.2,0,36.5,7.8,49,20.3S709,274.8,708.9,293.9z"
+          />
+        </g>
+      </svg>
     </div>
     <div class="line"></div>
     <div class="box">
-        <div class="box1">
-            <div class="text">
-                <p class="message">Click on Plus to START</p>
-            </div>
+      <div class="box1">
+        <p class="message">Click on Plus to START</p>
+        <h3 class="disNone">RESULT</h3>
+        <div class="result disNone">
+          <p>Grade Point Average :</p>
+          <div id="gpaResult"></div>
         </div>
-        <div class="box2">
-            <div class="inputs-lists" id="duplicater">
-                <form action="#" class="form-section">
-                    <input name="course-name" class="inputs course-name" type="text" placeholder="course name">
-                    <input name="unit" class="inputs unit" type="number" placeholder="unit" required>
-                    <input name="score" class="inputs score" type="number" placeholder="score" required>
-                    <button class="form-button">
-                        <svg version="1.1" class="iconRT restart" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080"
-                            style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
-                            <path
-                                d="M991.6,598.9c8.1-1.7,15.4,5.2,14.1,13.4c-11.1,71.5-38.3,137.7-78,194.7c-84.6,121.8-225.5,201.5-385,201.5
-	c-258.6,0-468.2-209.5-468.6-468c-0.3-255.1,205.4-464.7,460.5-469c225.7-3.8,415.7,152,464.5,362c3.7,16-7,31.9-23.3,34.3
-	l-43.4,6.5c-14.5,2.2-28.2-7.2-31.6-21.5c-15.7-65.1-49-124.7-97.6-173.3c-69.7-69.7-164.9-108.6-263.5-107.9
-	c-97.3,0.8-188.7,39-257.5,107.9C212.6,349.1,174.3,441.6,174.3,540c0,98.4,38.3,190.9,107.9,260.5c69,69,160.5,107.2,257.9,107.9
-	c96.8,0.7,190.3-36.9,259.6-104.5c19.9-19.4,37.3-40.6,52.1-63.3l-71.8-62.7c-12.7-11.1-7.7-31.9,8.7-35.9l114.2-24.2L991.6,598.9z" />
-                        </svg>
-                    </button>
-                    <button class="form-button">
-                        <svg version="1.1" class="iconRT trashcan" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080"
-                            style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
-                            <g>
-                                <path d="M850.6,388.7c-18-1.4-33.7,12.1-35,30.1l-33.4,439.7c-2.7,35.1-31.9,62.1-67,62.1h-92H461.9h-92c-35.2,0-64.4-27.1-67-62.1
-		l-33.4-439.7c-1.4-18-17-31.4-35-30.1h0c-18,1.4-31.4,17-30.1,35l34.4,452.4c4.7,62,56.4,109.8,118.5,109.8h104.7h161.2h104.7
-		c62.1,0,113.8-47.9,118.5-109.8l34.4-452.4C882.1,405.8,868.6,390.1,850.6,388.7L850.6,388.7z" />
-                                <g>
-                                    <path
-                                        d="M888.5,239.4H735.8l-18.2-80.6v0c-8.6-37.8-42.2-64.7-80.9-64.7H444.3c-38.8,0-72.4,26.9-80.9,64.7l-0.4,1.7l-17.8,78.9
-			c0,0-153.6,0-153.6,0c-17.8,0-31.1,16.1-31.1,33.2c0,18.3,13.9,33.2,31.1,33.2h696.9c17.2,0,31.1-14.8,31.1-33.2
-			S905.6,239.4,888.5,239.4z M417.9,239.4l13-57.5c2.8-12.5,14-21.4,26.8-21.4h165.5c12.8,0,24,8.9,26.8,21.4l13,57.5H417.9z" />
-                                </g>
-                            </g>
-                        </svg>
-                    </button>
-                </form>
-            </div>
-            <button class="plusButton" id="plus" onclick="duplicate()">
-                <img src="./image/icons-plus.svg" alt="" class="plusIcon">
-            </button>
+        <button id="calculate" class="disNone">calculate</button>
+      </div>
+      <div class="box2">
+        <div class="inputs-lists">
+          <!-- here add forms -->
         </div>
+        <button class="plusButton" id="plus">
+          <img src="./image/icons-plus.svg" alt="" class="plusIcon" />
+        </button>
+      </div>
     </div>
     <div class="footer">
-        <p>Copyright © 2024 Mostafa.GH. All rights reserved.</p>
-        <a href="mailto:mostafa229gh@gmail.com" id="email">mostafa229gh@gmail.com</a>
+      <p>Copyright © 2024 Mostafa.GH. All rights reserved.</p>
+      <a href="mailto:mostafa229gh@gmail.com" id="email"
+        >mostafa229gh@gmail.com</a
+      >
     </div>
     <script src="./js/script.js"></script>
-
-</body>
-
+  </body>
 </html>

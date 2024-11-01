@@ -22,6 +22,8 @@
   --inputs-bg-Color: #fff;
   --inputs-Color: #161616;
   --iconRT-Color: #284b63;
+  --calculate-Button: #284b63;
+  --result: #040404;
 }
 @font-face {
   font-family: "Boogaloo";
@@ -73,6 +75,8 @@ body {
   --inputs-bg-Color: #3a4b61;
   --inputs-Color: #f1d700;
   --iconRT-Color: #c9a2e2;
+  --calculate-Button: #f1d700;
+  --result: #D7D9CE;
 }
 .circle {
   width: 4vw;
@@ -111,19 +115,56 @@ body {
   border-radius: 7% 93% 9% 91% / 89% 6% 94% 11%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4vw;
   transition: border-radius 80ms linear 90ms;
+  color: var(--text-Color);
 }
 .box1:hover {
   border-radius: 6px;
   box-shadow: 1px 1px 18px -5px #1e4344;
 }
-.text {
+.message {
   width: 50%;
   font-size: 4vw;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--text-Color);
+}
+
+.box1 > h3 {
+  font-size: 3vw;
+  text-align: center;
+  letter-spacing: 20px;
+}
+.result {
+  width: 83%;
+  font-size: 2vw;
+  letter-spacing: 2px;
+}
+#calculate{
+  font-family: "Boogaloo";
+  font-size: 2.5vw;
+  letter-spacing: 2px;
+  background-color: var(--calculate-Button);
+  color: var(--bgColor);
+  width: 60%;
+  height: 4vw;
+  border-radius: 7% 93% 9% 91% / 89% 6% 94% 11%;
+}
+#gpaResult {
+  font-size: 2.5vw;
+  background-color: var(--inputs-bg-Color);
+  color: var(--result);
+  width: 100%;
+  height: 6vw;
+  border-radius: 10% 133% 6% 91% / 198% 16% 94% 31%;
+  margin: 6px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.disNone{
+  display: none;
 }
 .box2 {
   width: 69%;
@@ -156,7 +197,6 @@ body {
   filter: drop-shadow(6px 5px 7px #162a2b);
 }
 .inputs-lists {
-  display: none;
   width: 100%;
   transition: all 300ms linear;
   animation: fadeIn 200ms;
