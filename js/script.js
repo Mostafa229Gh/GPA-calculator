@@ -1,4 +1,5 @@
 let $ = document;
+
 //---Dark Mode Toggle
 const container = $.querySelector(":root");
 const darkMode = $.getElementById("dark-mode-toggle");
@@ -16,9 +17,11 @@ darkMode.addEventListener("click", () => {
   isMoved = !isMoved;
 });
 
-//---Plus and add Forms
+//---Move Plus - add Forms - add result items
 const puls = $.getElementById("plus");
 const table = $.querySelector(".inputs-lists");
+const messageBoxOne = $.querySelector(".message");
+const resultDisplay = $.getElementsByClassName("disNone");
 let form = `
 <form action="#" class="form-section">
   <input name="course-name" class="inputs course-name" type="text" placeholder="course name">
@@ -63,12 +66,16 @@ puls.addEventListener("click", () => {
   if (!isClick) {
     puls.style = "transform: translate(-31vw, -26vh) scale(0.2)";
     isClick = true;
+    messageBoxOne.style.display = "none";
+    resultDisplay[0].style.display = "block";
+    resultDisplay[1].style.display = "block";
+    resultDisplay[2].style.display = "block";
   }
   table.insertAdjacentHTML("beforeend", form);
   countOfForm++;
 });
 
-table.addEventListener("click", event => {
+table.addEventListener("click", (event) => {
   if (event.target.closest(".restart-button")) {
     const form = event.target.closest("form");
     form.reset();
@@ -80,6 +87,34 @@ table.addEventListener("click", event => {
     if (countOfForm == 0) {
       isClick = false;
       puls.style = "transform: none";
+      messageBoxOne.style.display = "block";
+      resultDisplay[0].style.display = "none";
+      resultDisplay[1].style.display = "none";
+      resultDisplay[2].style.display = "none";
+      gpaResult.textContent = "";
     }
   }
+});
+
+// calculate GPA and show
+const calculateButton = $.getElementById("calculate");
+calculateButton.addEventListener("click", () => {
+  const forms = table.querySelectorAll(".form-section");
+  
+  let totalUnits = 0;
+  let totalWeightedScores = 0;
+
+  forms.forEach((form) => {
+    const unit = parseFloat(form.querySelector(".unit").value);
+    const score = parseFloat(form.querySelector(".score").value);
+
+    if (!isNaN(unit) && !isNaN(score)) {
+      totalUnits += unit;
+      totalWeightedScores += unit * score;
+    }
+  });
+
+  const gpa = totalUnits ? (totalWeightedScores / totalUnits).toFixed(2) : 0;
+  const gpaResult = $.getElementById("gpaResult");
+  gpaResult.textContent = `${gpa}`;
 });
