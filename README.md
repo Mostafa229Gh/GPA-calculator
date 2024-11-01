@@ -17,6 +17,13 @@ A simple and efficient website to calculate your GPA based on your course scores
 5. Each form can be **cleared** individually.
 6. You can also **delete** any form if needed.
 
+## Project Task Checklist
+- [x] Create design in Figma
+- [x] Write and review code
+- [x] Deploy on GitHub Pages
+- [ ] Optimize for mobile responsiveness
+- [ ] Implement new features
+
 ## Technology Stack
 
 <div align="left">
