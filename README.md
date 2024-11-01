@@ -1,12 +1,18 @@
 # GPA Calculator
 
 A simple and efficient website to calculate your GPA based on your course scores and units.
+<br/><br/>
+You can view the project now : [Open the Project](https://your-github-username.github.io/your-repo-name)
+
+> **Note:** The mobile version is coming soon!
 
 ## Features
 
 - **Easy Input**: Quickly add your scores and units.
 - **Instant Results**: Calculate your GPA with a single click.
-- **Friendly and Stylish Design**: Appealing interface for a delightful experience.
+- **Friendly and Stylish Design**:
+  - Appealing interface for a delightful experience.
+  - Supports light and dark themes.
 
 ## How to Use
 
