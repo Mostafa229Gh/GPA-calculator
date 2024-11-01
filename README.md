@@ -2,7 +2,7 @@
 
 A simple and efficient website to calculate your GPA based on your course scores and units.
 <br/><br/>
-You can view the project now : [Open the Project](https://your-github-username.github.io/your-repo-name)
+You can view the project now : [Open the Project](https://mostafa229gh.github.io/GPA-calculator/)
 
 > **Note:** The mobile version is coming soon!
 
