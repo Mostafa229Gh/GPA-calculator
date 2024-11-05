@@ -259,3 +259,67 @@ body {
 #email:hover {
   color: var(--text-Color);
 }
+
+@media (max-width: 480px) {
+    .box{
+      flex-direction: column;
+      height: 80vh;
+      gap: 5vh;
+      padding: 30px 5px 30px 5px;
+    }
+    .box1{
+      gap: 0;
+      width: 95vw;
+      height: 12vh;
+      border-radius: 2rem ;
+    }
+    .Responsive{
+      background-color: var(--calculate-Button);
+      color: var(--bgColor);
+      width: 50%;
+      border-radius: 0rem 1rem 0rem 1rem;
+    }
+    .title{
+      font-size: 1.7rem;
+    }
+    .form-section{
+      position: relative;
+      width: 100vw;
+      gap: 2vw;
+    }
+    .plusButton{
+      width: 20vw;
+    }
+    .plusIcon{
+
+      width: 100%;
+    }
+
+    .unit{
+      width: 12vw;
+    }
+    .score{
+      width: 14vw;
+    }
+    .course-name{
+      width: 30vw;
+    }
+    .form-button{
+      width: 2.5rem;
+    }
+    .iconRT{
+      width: 1.5rem;
+    }
+
+    .result{
+      font-size: 1rem;
+    }
+    #gpaResult{
+      border-radius: 1rem;
+    }
+    .box2{
+      width: 95vw;
+      height: 80vh;
+    }
+  
+}
