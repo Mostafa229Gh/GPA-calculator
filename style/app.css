@@ -150,6 +150,7 @@ body {
   width: 60%;
   height: 4vw;
   border-radius: 7% 93% 9% 91% / 89% 6% 94% 11%;
+  cursor: pointer;
 }
 #gpaResult {
   font-size: 2.5vw;
